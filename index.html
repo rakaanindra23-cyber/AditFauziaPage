@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya ❤️ Fauzia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navigasi">
+  <div class="logo">
+    <h2>Welcome to Adit & Zia Page</h2>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#banner">Hallo!</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#countdown">Anniversary</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div id="banner" class="banner">
+  <img src="image/aditzia2.jpg">
+  <h1>Hallo..<span></span></h1>
+  <p> Aditya ❤️ Fauzia </p>
+
+  <a href=""><button>Selengkapnya</button></a>
+</div>
+
+
+  <div id="story" class="story">
+    <h2>Our Story</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt architecto dolor doloribus sequi, repudiandae quos mollitia ad sapiente nam libero, tempore assumenda voluptatibus, voluptatem quibusdam modi recusandae omnis totam distinctio. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quidem dolorem, molestiae consequuntur quae porro doloribus explicabo, aperiam veritatis harum cumque? Autem cupiditate quisquam impedit esse animi eligendi excepturi maiores. 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam quo aut, reiciendis iure voluptate vero rerum amet illo at natus earum. Esse maiores error labore animi facere, veritatis commodi?</p>
+  </div>
+
+<div class="countdown">
+  <h2>Menuju Hari Spesial</h2>
+  <p>Kami tidak sabar menantikan hari bahagia kami!</p>
+  <div class="time" id="countdown">166 Hari 8 Jam 28 Menit 48 Detik</div>
+</div>
+
+
+<section id="gallery" class="gallery">
+  <h2> Gallery </h2>
+  <div class="gallery-container">
+    <img src="image/0f6ab5e1-9b62-4828-acc1-8dd7e59bc423.jpg">
+    <img src="image/1902e63d-a16a-4541-bfd1-7112775c2388.jpg" >
+    <img src="image/2accfc77-a605-4776-9917-b3ac2be37367.jpg" >
+    <img src="image/2c483544-6673-49e2-9f55-fda817874925.jpg" >
+    <img src="image/39383a84-c93f-4aa5-a597-30ae4a0fdea0.jpg" >
+    <img src="image/49b5ac5a-06aa-451a-a5e8-5490c4ad5c58.jpg" >
+    <img src="image/aditkecil.jpg" >
+    <img src="image/ziakecil.jpg" >
+    <img src="image/aditkecil2.jpg" >
+    <img src="image/adit1.jpg" >
+    <img src="image/zia1.jpg" >
+    <img src="image/adit2.jpg" >
+    <img src="image/zia2.jpg" >
+    <img src="image/adit4.jpg" >
+    <img src="image/zia4.jpg" >
+    <img src="image/522c53ee-da10-4b5d-9156-afc811220ceb.jpg" >
+    <img src="image/60bf6f41-052e-4e26-90a4-deb6cdc6e27f.jpg" >
+    <img src="image/66d3baa0-fdc9-425e-93ee-529c6680fffb.jpg" >
+    <img src="image/b992f083-d171-476a-a39d-e188f02c69d2.jpg" >
+    <img src="image/c0e84e84-4fd7-4877-abd1-db208c0fe20a.jpg" >
+    <img src="image/cf5483e3-206e-44ee-ae6c-e224c58d3d58.jpg" >
+    <img src="image/d34c29dc-75b9-4821-ab68-50e8829e36bd.jpg" >
+    <img src="image/dc304b40-f981-4a7a-8467-68c41dd28c21.jpg" >
+    <img src="image/zia10.jpg" >
+
+  </div>
+</section>
+
+
+
+  <script>
+    const targetDate = new Date("Feb 22, 2026 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdownEl.innerHTML = "Happy Anniversary Adit & Zia!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }, 1000);
+  </script>
+</body>
+</html>
